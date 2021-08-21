@@ -1,0 +1,2410 @@
+stackbitVersion: ~0.3.0
+dataDir: ''
+models:
+  manifest:
+    type: data
+    label: Manifest
+    file: public/manifest.json
+    fields:
+      - type: string
+        name: short_name
+        label: Short Name
+      - type: string
+        name: name
+        label: Name
+      - type: list
+        name: icons
+        label: Icons
+        items:
+          type: object
+          fields:
+            - type: string
+              name: src
+              label: Src
+            - type: string
+              name: sizes
+              label: Sizes
+            - type: string
+              name: type
+              label: Type
+      - type: string
+        name: start_url
+        label: Start Url
+      - type: string
+        name: display
+        label: Display
+      - type: string
+        name: theme_color
+        label: Theme Color
+      - type: string
+        name: background_color
+        label: Background Color
+  collectibles_config:
+    type: data
+    label: Collectibles Config
+    file: src/config/collectibles-config.json
+    fields:
+      - type: list
+        name: collections
+        label: Collections
+        items:
+          type: object
+          fields:
+            - type: string
+              name: symbol
+              label: Symbol
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: icon
+              label: Icon
+            - type: string
+              name: description
+              label: Description
+            - type: object
+              name: addresses
+              label: Addresses
+              fields:
+                - type: string
+                  name: mainnet
+                  label: Mainnet
+  config_ieo:
+    type: data
+    label: Config Ieo
+    file: src/config/config-ieo.json
+    fields:
+      - type: list
+        name: tokens
+        label: Tokens
+        items:
+          type: object
+          fields:
+            - type: number
+              name: decimals
+              label: Decimals
+              subtype: int
+            - type: string
+              name: symbol
+              label: Symbol
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: primaryColor
+              label: Primary Color
+            - type: image
+              name: icon
+              label: Icon
+            - type: object
+              name: addresses
+              label: Addresses
+              fields:
+                - type: string
+                  name: '1'
+                  label: '1'
+                - type: string
+                  name: '3'
+                  label: '3'
+                - type: string
+                  name: '4'
+                  label: '4'
+                - type: string
+                  name: '42'
+                  label: '42'
+                - type: string
+                  name: '50'
+                  label: '50'
+            - type: string
+              name: id
+              label: Id
+            - type: string
+              name: c_id
+              label: C Id
+            - type: number
+              name: displayDecimals
+              label: Display Decimals
+              subtype: int
+            - type: string
+              name: description
+              label: Description
+            - type: string
+              name: website
+              label: Website
+            - type: object
+              name: social
+              label: Social
+              fields:
+                - type: string
+                  name: telegram_url
+                  label: Telegram Url
+                - type: string
+                  name: twitter_url
+                  label: Twitter Url
+                - type: string
+                  name: facebook_url
+                  label: Facebook Url
+                - type: string
+                  name: discord_url
+                  label: Discord Url
+                - type: string
+                  name: reddit_url
+                  label: Reddit Url
+                - type: string
+                  name: bitcointalk_url
+                  label: Bitcointalk Url
+                - type: string
+                  name: statedapps_url
+                  label: Statedapps Url
+            - type: list
+              name: owners
+              label: Owners
+              items:
+                type: string
+            - type: string
+              name: feePercentage
+              label: Fee Percentage
+  settings_assets:
+    type: data
+    label: Settings Assets
+    file: src/config/settingsAssets.json
+    fields:
+      - type: object
+        name: coins
+        label: Coins
+        fields:
+          - type: object
+            name: eth
+            label: Eth
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: float
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: float
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+      - type: object
+        name: tokens
+        label: Tokens
+        fields:
+          - type: object
+            name: vsf
+            label: Vsf
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+                  - type: object
+                    name: flipLite
+                    label: Flip Lite
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+                  - type: object
+                    name: flip
+                    label: Flip
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+                  - type: object
+                    name: roulette
+                    label: Roulette
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: vsffree
+            label: Vsffree
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: boolean
+                name: events
+                label: Events
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: minimumWithdrawal
+                label: Minimum Withdrawal
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawal
+                label: Maximum Withdrawal
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+          - type: object
+            name: vsfblackfriday
+            label: Vsfblackfriday
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: boolean
+                name: events
+                label: Events
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: minimumWithdrawal
+                label: Minimum Withdrawal
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawal
+                label: Maximum Withdrawal
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+          - type: object
+            name: zeus
+            label: Zeus
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: pop
+            label: Pop
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: dpc
+            label: Dpc
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: tuck
+            label: Tuck
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: rxt
+            label: Rxt
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: 0xbtc
+            label: 0 Xbtc
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: float
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: void
+            label: Void
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: vya
+            label: Vya
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: vdex
+            label: Vdex
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: angel
+            label: Angel
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: float
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: mia
+            label: Mia
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: sam
+            label: Sam
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: triz
+            label: Triz
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: rbc
+            label: Rbc
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: ldex
+            label: Ldex
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: idn
+            label: Idn
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: ash
+            label: Ash
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: pixby
+            label: Pixby
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: nuk
+            label: Nuk
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: muxe
+            label: Muxe
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: seol
+            label: Seol
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: wwt
+            label: Wwt
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: ltn
+            label: Ltn
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: bcp
+            label: Bcp
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: chess
+            label: Chess
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: whackd
+            label: Whackd
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: ethbold
+            label: Ethbold
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: bdax
+            label: Bdax
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: defl
+            label: Defl
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: weth
+            label: Weth
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: float
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: float
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+  settings_assets_whitelist_addresses:
+    type: data
+    label: Settings Assets Whitelist Addresses
+    file: src/config/settingsAssetsWhitelistAddresses.json
+    fields:
+      - type: list
+        name: defaultWhitelistAddresses
+        label: Default Whitelist Addresses
+        items:
+          type: string
+      - type: number
+        name: defaultFeePercentage
+        label: Default Fee Percentage
+        subtype: float
+  src:
+    type: data
+    label: Src
+    folder: src
+    fields:
+      - type: object
+        name: general
+        label: General
+        fields:
+          - type: string
+            name: title
+            label: Title
+          - type: image
+            name: icon
+            label: Icon
+          - type: object
+            name: social
+            label: Social
+            fields:
+              - type: string
+                name: telegram_url
+                label: Telegram Url
+              - type: string
+                name: twitter_url
+                label: Twitter Url
+              - type: string
+                name: facebook_url
+                label: Facebook Url
+              - type: string
+                name: discord_url
+                label: Discord Url
+              - type: string
+                name: reddit_url
+                label: Reddit Url
+              - type: string
+                name: bitcointalk_url
+                label: Bitcointalk Url
+              - type: string
+                name: statedapps_url
+                label: Statedapps Url
+      - type: list
+        name: tokens
+        label: Tokens
+        items:
+          type: object
+          fields:
+            - type: string
+              name: symbol
+              label: Symbol
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: primaryColor
+              label: Primary Color
+            - type: image
+              name: icon
+              label: Icon
+            - type: object
+              name: addresses
+              label: Addresses
+              fields:
+                - type: string
+                  name: '1'
+                  label: '1'
+                - type: string
+                  name: '3'
+                  label: '3'
+                - type: string
+                  name: '4'
+                  label: '4'
+                - type: string
+                  name: '5'
+                  label: '5'
+                - type: string
+                  name: '42'
+                  label: '42'
+                - type: string
+                  name: '50'
+                  label: '50'
+            - type: number
+              name: decimals
+              label: Decimals
+              subtype: int
+            - type: number
+              name: displayDecimals
+              label: Display Decimals
+              subtype: int
+            - type: string
+              name: id
+              label: Id
+            - type: string
+              name: c_id
+              label: C Id
+            - type: string
+              name: website
+              label: Website
+            - type: string
+              name: description
+              label: Description
+      - type: list
+        name: pairs
+        label: Pairs
+        items:
+          type: object
+          fields:
+            - type: string
+              name: base
+              label: Base
+            - type: string
+              name: quote
+              label: Quote
+            - type: object
+              name: config
+              label: Config
+              fields:
+                - type: number
+                  name: basePrecision
+                  label: Base Precision
+                  subtype: int
+                - type: number
+                  name: pricePrecision
+                  label: Price Precision
+                  subtype: int
+                - type: number
+                  name: minAmount
+                  label: Min Amount
+                  subtype: int
+      - type: list
+        name: marketFilters
+        label: Market Filters
+        items:
+          type: object
+          fields:
+            - type: string
+              name: text
+              label: Text
+            - type: string
+              name: value
+              label: Value
+      - type: object
+        name: wallets
+        label: Wallets
+        fields:
+          - type: boolean
+            name: metamask
+            label: Metamask
+          - type: boolean
+            name: portis
+            label: Portis
+          - type: boolean
+            name: fortmatic
+            label: Fortmatic
+          - type: boolean
+            name: torus
+            label: Torus
+  data_1:
+    type: data
+    label: Data 1
+    folder: ''
+    fields:
+      - type: object
+        name: compilerOptions
+        label: Compiler Options
+        fields:
+          - type: string
+            name: baseUrl
+            label: Base Url
+          - type: boolean
+            name: importHelpers
+            label: Import Helpers
+          - type: list
+            name: lib
+            label: Lib
+            items:
+              type: string
+          - type: string
+            name: module
+            label: Module
+          - type: string
+            name: moduleResolution
+            label: Module Resolution
+          - type: boolean
+            name: noEmitOnError
+            label: No Emit On Error
+          - type: boolean
+            name: noFallthroughCasesInSwitch
+            label: No Fallthrough Cases In Switch
+          - type: boolean
+            name: noImplicitReturns
+            label: No Implicit Returns
+          - type: boolean
+            name: noUnusedLocals
+            label: No Unused Locals
+          - type: string
+            name: outDir
+            label: Out Dir
+          - type: boolean
+            name: sourceMap
+            label: Source Map
+          - type: boolean
+            name: strict
+            label: Strict
+          - type: string
+            name: target
+            label: Target
+      - type: list
+        name: include
+        label: Include
+        items:
+          type: string
