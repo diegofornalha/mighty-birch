@@ -8,8 +8,8 @@
   "dir": "ltr",
   "display": "fullscreen",
   "orientation": "portrait",
-  "scope": "/erc20",
-  "start_url": "/",
+  "scope": "/",
+  "start_url": "/erc20",
   "splash_pages": null,
   "prefer_related_applications": false,
     "icons": [
