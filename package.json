@@ -22,6 +22,7 @@
         "@walletconnect/web3-provider": "^1.0.0-beta.47",
         "async-retry": "^1.2.3",
         "async-sema": "^3.0.0",
+        "@babel/standalone": "^7.15.5",
         "binance-fiat-widget": "^1.1.6",
         "bowser": "^2.9.0",
         "connected-react-router": "^6.8.0",
