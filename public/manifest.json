@@ -6,10 +6,9 @@
   "background_color": "#0D0415",
   "theme_color": "#F338C3",
   "dir": "ltr",
-  "display": "fullscreen",
-  "orientation": "portrait",
+  "display": "standalone",
   "scope": ".",
-  "start_url": "/index.html",
+  "start_url": ".",
   "splash_pages": null,
   "prefer_related_applications": false,
     "icons": [
