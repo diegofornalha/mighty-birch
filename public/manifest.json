@@ -5,12 +5,11 @@
   "description": "Swap, yield, lend, borrow, leverage, limit, launch all on one community driven ecosystem",
   "background_color": "#0D0415",
   "theme_color": "#F338C3",
-  "dir": "ltr",
   "display": "standalone",
-  "scope": ".",
-  "start_url": ".",
-  "splash_pages": null,
-  "prefer_related_applications": false,
+  "scope": "/",
+  "start_url": "/",
+  "splash_pages": true,
+  "prefer_related_applications": true,
     "icons": [
         {
             "src": "favicon.ico",
