@@ -9,7 +9,6 @@
   "scope": ".",
   "start_url": "/",
   "splash_pages": true,
-  "prefer_related_applications": true,
     "icons": [
         {
             "src": "favicon.ico",
